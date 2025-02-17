@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-      <div>
+      <div className="bg-[#d8d3c7]">
         <div>
           <h1 className="text-black text-[200px] font-bold">
             RIHAL CHALLENGE

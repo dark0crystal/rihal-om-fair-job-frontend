@@ -44,9 +44,9 @@ export default function SummarizerForm(){
                 <button
                     type="submit"
                     disabled={isSubmitting || loading} // Disable button during loading or submitting
-                    className="w-[60px] lg:w-[80px] lg:h-fit p-3 bg-green-400 text-white font-semibold rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-400"
+                    className="w-[60px] lg:w-[150px] lg:h-fit p-3 bg-green-400 text-white font-semibold rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-400"
               >
-                {loading ? <RiLoader2Line size={26} className="animate-spin" /> : <FaSearch size={26} />}
+                {loading ? <RiLoader2Line size={26} className="animate-spin" /> : <div className="flex gap-1.5 justify-center items-center"><FaSearch size={20} /> <h1>Summarize</h1></div>}
               </button>
               </div>
             </form>

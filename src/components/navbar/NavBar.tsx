@@ -8,11 +8,9 @@ const NavBar = () => {
 
   const [isActive, setActive] = useState(false)
   return (
-    <div className='w-screen h-[12vh] flex justify-center items-center'>
+    <div className='relative w-screen h-[15vh]'>
        {/* <Brand /> */}
-       <div>
           <Button isActive={isActive} toggleMenu={()=>{setActive(!isActive)}} />
-       </div>
     </div>
   )
 }

@@ -2,7 +2,9 @@ import React from 'react'
 
 const Brand = () => {
   return (
-    <div>RIHAL CHALLENGE</div>
+    <div>
+      
+    </div>
   )
 }
 

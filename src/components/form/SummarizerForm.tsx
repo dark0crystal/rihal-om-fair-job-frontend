@@ -31,23 +31,26 @@ export default function SummarizerForm(){
       };
 
     return(
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-row  gap-2 border rounded-4xl justify-center items-center w-[300px] md:w-[600px]  md:p-2">
+                <div className="w-full h-[40px] md:h-[50px] ">
                 <input 
                 {...register("summarizedUrl")}
-                className="border-2"
+                className="text-xl px-2 rounded-3xl w-full  h-full "
                 />
-                {errors.summarizedUrl && <p className="mt-2 text-xs text-red-500">{errors.summarizedUrl.message}</p>}
-
-
+                
+                </div>
+                <div>
                 <button
-                type="submit"
-                disabled={isSubmitting || loading} // Disable button during loading or submitting
-                className="w-full lg:w-fit lg:h-fit p-3 bg-blue-600/90 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-400"
+                    type="submit"
+                    disabled={isSubmitting || loading} // Disable button during loading or submitting
+                    className="w-[60px] lg:w-[80px] lg:h-fit p-3 bg-green-400 text-white font-semibold rounded-3xl hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:bg-gray-400"
               >
                 {loading ? <RiLoader2Line size={26} className="animate-spin" /> : <FaSearch size={26} />}
               </button>
+              </div>
             </form>
+            {errors.summarizedUrl && <p className="mt-2 text-xs text-red-500">{errors.summarizedUrl.message}</p>}
         </div>
     )
 }

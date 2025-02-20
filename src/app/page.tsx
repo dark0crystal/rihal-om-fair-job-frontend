@@ -1,7 +1,10 @@
+import SummarizerForm from "@/components/form/SummarizerForm";
 import Image from "next/image";
 
 export default function Home() {
   return (
-     <div>index</div>
+     <div>
+      <SummarizerForm/>
+     </div>
   );
 }

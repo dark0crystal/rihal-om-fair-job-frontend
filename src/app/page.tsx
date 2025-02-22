@@ -9,6 +9,8 @@ import TextCard from "@/components/Motion/TextCard";
 import {motion} from "framer-motion"
 import { useScroll,useTransform } from "framer-motion";
 import { useRef } from "react";
+import Words from "@/components/Motion/lettersFloating/Words";
+import Paragraph from "@/components/Motion/lettersFloating/Paragraph";
 
 
 export default function Home() {
@@ -67,6 +69,11 @@ export default function Home() {
         >
           <ImagesCard cardInfo={first} customStyle="" bgColor=""/>
         </motion.div>
+
+
+        <div className="flex flex-col justify-center items-center w-screen h-[100vh] text-center"> 
+          <Paragraph/>
+        </div>
 
      </div>
   );

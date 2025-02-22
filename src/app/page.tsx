@@ -7,15 +7,31 @@ import { firstContent } from "../../public/assets";
 import ImagesCard from "@/components/Motion/ImagesCard";
 import TextCard from "@/components/Motion/TextCard";
 import {motion} from "framer-motion"
+import { useScroll,useTransform } from "framer-motion";
+import { useRef } from "react";
 
 
 export default function Home() {
+  const targetRef = useRef<HTMLDivElement>(null);
+  const {scrollYProgress} = useScroll({
+    target:targetRef,
+    offset:["start end","start end"]
+  })
+// Default: ["start start", "end end"]
+// offset describes intersections, points where the target and container meet.
+// For example, the intersection "start end" means when the start of the target on the tracked axis meets the end of the container.
+// So if the target is an element, the container is the window, 
+// and we're tracking the vertical axis then "start end" is where the top of the element meets the bottom of the viewport.
+
+  const scale= useTransform(scrollYProgress , [0,0.5], [1,0.5])
   return (
-     <div className="overflow-hidden">
-      
-      
+     <div ref={targetRef} className="overflow-hidden"> 
       <div  className=" relative h-[80vh] w-screen flex flex-col justify-center items-center bg-[#f9f5ec]">
-        <motion.div className="absolute top-8 left-20 -z-0">
+        {/* floating images section */}
+        <motion.div 
+        className="absolute top-8 left-20 -z-0"
+        style={{scale}}
+        >
           <ImagesCard cardInfo={first} customStyle="" bgColor=""/>
         </motion.div>
         <div className="z-10 w-screen flex flex-col justify-center items-center h-[40vh] text-[#131313] text-center">

@@ -1,12 +1,17 @@
 
 import SummarizerForm from "@/components/form/SummarizerForm";
-import { Simple } from "@/components/RiveTest";
+
 
 export default function Home() {
   return (
      <div>
       
-      <div  className="h-[100vh] w-screen flex justify-center items-center">
+      <div  className="h-[80vh] w-screen flex flex-col justify-center items-center bg-black">
+        <div className="h-fit w-screen text-white">
+            <h1 className="text-9xl font-semibold ">WOW</h1>
+            <h1 className="text-9xl font-semibold">WOW</h1>
+            <h1 className="text-9xl font-semibold">WOW</h1>
+        </div>
       <div>
         <SummarizerForm/>
       </div>

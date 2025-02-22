@@ -32,11 +32,11 @@ export default function SummarizerForm(){
 
     return(
         <div className="">
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-row  gap-2 border rounded-4xl justify-center items-center w-[300px] md:w-[600px]  md:p-2">
-                <div className="w-full h-[40px] md:h-[50px] ">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-row  gap-2 border rounded-4xl justify-center items-center w-[300px] md:w-[600px]  md:p-2  bg-gradient-to-r from-violet-600 via-violet-600 to-indigo-600">
+                <div className="w-full h-[40px] md:h-[50px] bg-white/60 rounded-3xl">
                 <input 
                 {...register("summarizedUrl")}
-                className="text-xl px-2 rounded-3xl w-full  h-full "
+                className="text-xl px-2  w-full rounded-3xl  h-full "
                 />
                 
                 </div>

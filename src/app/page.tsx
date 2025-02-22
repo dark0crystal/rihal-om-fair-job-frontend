@@ -38,15 +38,22 @@ export default function Home() {
       </div>
       </div>
       {/*  */}
-      <div>
+      <div className="absolute bottom-0 rotate-6">
         <TextCard cardInfo={firstContent}/>
       </div>
       {/*  */}
-      <div className="h-[100vh] w-screen bg-[#f9f5ec]">
+      <div className=" relative h-[100vh] w-screen bg-[#f9f5ec]">
+        {/* left image section */}
+        <div className="absolute left-0 top-6 -rotate-20">
           <ImagesCard cardInfo={first} customStyle="" bgColor=""/>
+        </div>
+        {/* right image section */}
+        <div className="absolute right-0 top-6 rotate-20">
           <ImagesCard cardInfo={first} customStyle="" bgColor=""/>
+        </div>
           
       </div>
+      
        {/* floating images section */}
        <motion.div 
         className=""

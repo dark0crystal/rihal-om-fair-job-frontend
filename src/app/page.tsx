@@ -2,6 +2,8 @@
 import SummarizerForm from "@/components/form/SummarizerForm";
 import Image from "next/image";
 import Ximg from "../../public/xxx.png"
+import {first} from "../../public/images"
+import ImagesCard from "@/components/Motion/ImagesCard";
 
 export default function Home() {
   return (
@@ -16,8 +18,8 @@ export default function Home() {
         <SummarizerForm/>
       </div>
       </div>
-      <div className="h-[100vh] w-screen">
-
+      <div className="h-[100vh] w-screen bg-[#f9f5ec]">
+          <ImagesCard cardInfo={first} customStyle="" bgColor=""/>
       </div>
 
      </div>

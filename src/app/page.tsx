@@ -1,5 +1,6 @@
 
 import SummarizerForm from "@/components/form/SummarizerForm";
+import { Simple } from "@/components/RiveTest";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <div className="h-[100vh] w-screen">
 
       </div>
+
      </div>
   );
 }

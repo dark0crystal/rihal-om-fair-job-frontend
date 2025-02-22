@@ -38,14 +38,21 @@ export default function Home() {
       </div>
       </div>
       {/*  */}
-      <div className="absolute bottom-0 rotate-6">
+      <div className="">
         <TextCard cardInfo={firstContent}/>
       </div>
-      {/*  */}
-      <div className=" relative h-[100vh] w-screen bg-[#f9f5ec]">
+
+      {/* Rotated images section and centered content */}
+      <div className="flex flex-col justify-center items-center  relative h-[60vh] w-screen bg-[#f9f5ec]">
         {/* left image section */}
-        <div className="absolute left-0 top-6 -rotate-20">
+        <div className="absolute left-0 bottom-0 md:top-6  -rotate-20">
           <ImagesCard cardInfo={first} customStyle="" bgColor=""/>
+        </div>
+        {/* center content */}
+        <div className="w-[60vw] lg:w-[50vw]">
+          <h1 className="text-xl md:text-3xl lg:text-5xl text-center ">
+              we inivating the world to the nice human in the world 
+          </h1>
         </div>
         {/* right image section */}
         <div className="absolute right-0 top-6 rotate-20">

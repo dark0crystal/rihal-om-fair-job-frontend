@@ -11,20 +11,17 @@ export default function ImagesCard( {cardInfo, customStyle , bgColor}:any){
         target:targetRef , 
         offset:["start end" , "end start"]
     })
-    const y =useTransform ( scrollYProgress, [0,1] , [-100,150] )
+    const y =useTransform ( scrollYProgress, [0,1] , [100,-140] )
     const left = "-55%";
 
     return(
         <motion.div ref={targetRef}
         style={{y}}
-        className={` h-fit w-[150px] bg-white flex flex-col p-3 items-center ${bgColor}`}>
+        className={` h-fit w-[70px] md:w-[150px] lg:w-[170px] bg-white flex flex-col p-3 items-center ${bgColor}`}>
 
-            <div
-            className=""
-           
-            >
+            <div className="" >
                 {cardInfo.map((img: any , index: Key | null | undefined)=>(
-                    <div key={index} className={`w-[130px] h-[130px] relative my-2 ${customStyle}`}>
+                    <div key={index} className={`w-[60px] h-[80px] md:w-[130px] md:h-[130px] lg:w-[150px] lg:h-[150px] relative my-2 overflow-hidden ${customStyle}`}>
                         <Image  src={img} alt="image" objectFit="cover" fill/>
                     </div>
                 ))}

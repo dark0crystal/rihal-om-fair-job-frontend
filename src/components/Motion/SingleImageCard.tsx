@@ -15,7 +15,7 @@ export default function SingleImageCard({customStyle ,bottomSectionHeight}:any){
     offset:["start start","end end"]
   })
   return(
-    <div className="w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3" >
+    <div className={`${customStyle}`}>
       
       <div className="w-full h-full relative">
         <Image

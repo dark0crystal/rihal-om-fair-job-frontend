@@ -77,7 +77,7 @@ export default function Home() {
         </div>
         <div className="h-[100vh] flex flex-col justify-center items-center">
           <CircleDesign bgColor="bg-green-700" innerColor="bg-amber-200" width="w-[60px]" height="h-[60px]"/>
-          <SingleImageCard/>
+          <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
         </div>
 
      </div>

@@ -9,7 +9,6 @@ import TextCard from "@/components/Motion/TextCard";
 import {motion} from "framer-motion"
 import { useScroll,useTransform } from "framer-motion";
 import { useRef } from "react";
-import Words from "@/components/Motion/lettersFloating/Words";
 import Paragraph from "@/components/Motion/lettersFloating/Paragraph";
 
 
@@ -74,6 +73,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center w-screen h-[100vh] text-center"> 
           <Paragraph/>
         </div>
+        <div className="h-[100vh]"/>
 
      </div>
   );

@@ -1,13 +1,13 @@
-"use client"
+// "use client"
 
 
-export default function SingleImageCard(){
+// export default function SingleImageCard(){
 
-  return(
-    <div >
+//   return(
+//     <div >
 
       
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }

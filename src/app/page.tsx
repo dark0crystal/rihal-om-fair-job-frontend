@@ -69,7 +69,7 @@ export default function Home() {
           <ImagesCard cardInfo={first} customStyle="" bgColor=""/>
         </motion.div>
 
-
+      {/* floating letters */}
         <div className="flex flex-col justify-center items-center w-screen h-[100vh] text-center"> 
           <Paragraph/>
         </div>

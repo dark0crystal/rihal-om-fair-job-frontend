@@ -10,7 +10,7 @@ export default function Paragraph(){
     const targetRef = useRef<HTMLDivElement>(null)
     const {scrollYProgress} =useScroll({
         target:targetRef , 
-        offset: ["start 0.8" , "end 0.25"]
+        offset: ["start 0.4" , "end 0.25"]
     })
 
     // const yb= useTransform(scrollYProgress ,[0 ,1],["-10%" , "100%"])
@@ -25,11 +25,12 @@ export default function Paragraph(){
                 <h1 key={index} className="bg-amber-100">
                 { 
                 character.map((char: any, index: number)=>{
-                    const start  = index *10  ;
-                    console.log(start)
-                    const end =start *2 ;
-                    console.log(end)
-                    return <Word scrollYProgress={scrollYProgress} range={[start ,end]}  key={index}>{char}</Word>
+                    const start=(index+1)/100  ;
+                    const mid  = (index+5)/100  ;
+                    const min  = (index+10)/100  ;
+                    const end  = (index+15)/100  ;
+                    
+                    return <Word scrollYProgress={scrollYProgress} range={[start,mid,min,end]}  key={index}>{char}</Word>
                 })}
             </h1>
             )
@@ -40,7 +41,7 @@ export default function Paragraph(){
 
 const Word =({children ,scrollYProgress, range }:any)=>{
     // const y= useTransform(scrollYProgress ,range,[0 , 1])
-    const y= useTransform(scrollYProgress ,[0.1 ,0.25 ,0.7,1],["0%","-55%","-70%","-80%"])
+    const y= useTransform(scrollYProgress ,range,["40%","-55%","-70%","-80%"])
     // const x =0.4
     // const z =20
 

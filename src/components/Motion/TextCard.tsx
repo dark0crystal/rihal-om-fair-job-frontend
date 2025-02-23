@@ -3,6 +3,7 @@ import {motion} from "framer-motion"
 import { useScroll,useTransform} from "framer-motion";
 import { useRef } from "react";
 import { Key } from "react";
+import CircleDesign from "../CircleDesign";
 
 export default function TextCard( {cardInfo, customStyle , bgColor}:any){
     const targetRef = useRef<HTMLDivElement>(null);
@@ -18,8 +19,10 @@ export default function TextCard( {cardInfo, customStyle , bgColor}:any){
                 {[...cardInfo,...cardInfo].map((content: string , index: Key | null | undefined)=>(
                     <motion.div 
                     style={{left , x}}
-                     key={index} className={`mx-8  ${customStyle}`}>
+                     key={index} className={`mx-8  flex flex-row w-fit justify-center items-center${customStyle}`}>
                         <h1 className="text-3xl font-semibold">{content}</h1>
+                        <CircleDesign bgColor="bg-green-700" innerColor="bg-amber-200" width="w-[60px]" height="h-[60px]"/>
+                        
                     </motion.div>
                 ))}
             </motion.div>

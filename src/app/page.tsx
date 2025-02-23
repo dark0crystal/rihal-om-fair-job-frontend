@@ -10,6 +10,7 @@ import {motion} from "framer-motion"
 import { useScroll,useTransform } from "framer-motion";
 import { useRef } from "react";
 import Paragraph from "@/components/Motion/lettersFloating/Paragraph";
+import CircleDesign from "@/components/CircleDesign";
 
 
 export default function Home() {
@@ -73,7 +74,9 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center w-screen h-[100vh] text-center"> 
           <Paragraph/>
         </div>
-        <div className="h-[100vh]"/>
+        <div className="h-[100vh]">
+          <CircleDesign bgColor="bg-green-700" innerColor="bg-amber-200" width="w-[60px]" height="h-[60px]"/>
+        </div>
 
      </div>
   );

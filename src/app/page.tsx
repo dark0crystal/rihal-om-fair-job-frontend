@@ -19,16 +19,17 @@ import Lenis from '@studio-freight/lenis'
 
 export default function Home() {
   // smoth scroll
-  useEffect( () => {
-    const lenis = new Lenis()
-   
-    function raf(time: number) {
+
+    useEffect( () => {
+  
+      const lenis = new Lenis()
+      function raf(time: number) {
         lenis.raf(time)
         requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-},[])
+      }
+      requestAnimationFrame(raf)
+  
+    }, [])
 
   const targetRef = useRef<HTMLDivElement>(null);
   const {scrollYProgress} = useScroll({

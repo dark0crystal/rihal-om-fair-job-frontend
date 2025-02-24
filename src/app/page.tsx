@@ -45,12 +45,17 @@ export default function Home() {
   const scale= useTransform(scrollYProgress , [1,0], [0.7, 1])
   return (
      <div ref={targetRef} className="overflow-hidden"> 
-      <div className=" h-[80vh] w-screen flex flex-col justify-center items-center bg-[#f9f5ec]">
+      <div className=" h-[80vh] w-screen flex flex-col  items-center bg-[#f9f5ec]">
+        <div className="h-[10vh]"/>
         {/* Hero Paragraph */}
-        <motion.div style={{scale}} className="p-10 lg:p-2 w-screen flex flex-col justify-center items-center md:min-h-[30vh] min-h-[40vh] h-fit text-[#131313] text-center">
-            <Image src={Ximg} width={200} height={150} alt="xx"/>
-            <h1  className="text-[calc(41px+61.5*(90vw-375px)/684)] leading-[1] font-bold   lg:font-black "><span className="text-[#7546ff]">Ready</span> to get insightful summaries?<span className="text-[#7546ff]"> Let&apos;s dive in</span></h1>   
-        </motion.div>
+        <div  className="p-10 lg:p-2 w-fit flex flex-col justify-center items-center md:min-h-[30vh] min-h-[40vh] h-fit text-[#131313] text-center capitalize">
+            <Paragraph  paragraph="summarization?" customStyle="uppercase  text-[calc(35px+50.5*(100vw-375px)/584)] leading-[1] font-black "/>
+            <div className="flex flex-row justify-between w-full h-fit">
+              <Paragraph paragraph="Ready?" customStyle="uppercase text-[#7546ff]  text-[calc(47px+47*(100vw-960px)/960)] leading-[1] font-bold "/>
+              <Paragraph paragraph="Let&apos;s dive in" customStyle="text-[#7546ff] uppercase  text-[calc(47px+47*(100vw-960px)/960)] leading-[1] font-bold no-wrap"/>
+            </div>
+            {/* <h1  className="uppercase  text-[calc(41px+61.5*(100vw-375px)/584)] leading-[1] font-black "><span className="text-[#7546ff]  text-[calc(47px+47*(100vw-960px)/960)]">Ready</span>wants summarization?<span className="text-[#7546ff]"> Let&apos;s dive in</span></h1>    */}
+        </div>
 
        
         {/* Form */}
@@ -100,7 +105,7 @@ export default function Home() {
 
       {/* floating letters */}
         <div className="flex flex-col justify-center items-center w-screen h-[100vh] text-center"> 
-          <Paragraph/>
+          <Paragraph paragraph="Lets dive in"/>
         </div>
         <div className="h-[100vh] flex flex-col justify-center items-center">
           <CircleDesign bgColor="bg-green-700" innerColor="bg-amber-200" width="w-[60px]" height="h-[60px]"/>

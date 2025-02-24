@@ -29,20 +29,49 @@ export default function Home() {
   const scale= useTransform(scrollYProgress , [1,0], [0.7, 1])
   return (
      <div ref={targetRef} className="overflow-hidden"> 
-      <div className="h-[80vh] w-screen flex flex-col justify-center items-center bg-[#f9f5ec]">
+      <div className=" h-[80vh] w-screen flex flex-col justify-center items-center bg-[#f9f5ec]">
         {/* Hero Paragraph */}
         <motion.div style={{scale}} className="p-10 lg:p-2 w-screen flex flex-col justify-center items-center md:min-h-[30vh] min-h-[40vh] h-fit text-[#131313] text-center">
             <Image src={Ximg} width={200} height={150} alt="xx"/>
             <h1  className="text-3xl md:text-6xl lg:text-8xl font-bold   lg:font-semibold "><span className="text-[#7546ff]">Ready</span> to get insightful summaries?<span className="text-[#7546ff]"> Let&apos;s dive in</span></h1>   
         </motion.div>
+
+       
         {/* Form */}
-      <div className="mt-10">
-        <SummarizerForm/>
-      </div>
+        <div className="mt-10">
+          <SummarizerForm/>
+        </div>
       </div>
       {/*  */}
       <div className="">
         <TextCard cardInfo={firstContent}/>
+      </div>
+
+      <div className="h-[100vh] w-screen  bg-violet-200 ">
+
+        <div className=" h-[50vh] w-screen bg-amber-100 flex flex-col justify-center items-center text-center">
+          <h1 className="text-8xl font-semibold">we are here to help you creating</h1>
+        </div>
+
+        <div className="grid grid-cols-4 grid-rows-1">
+            {/*  */}
+            <div>
+              <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
+            </div>
+            {/*  */}
+            <div>
+                <SingleImageCard customStyle=" w-[200px] h-[240px] bg-red-300 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
+            </div>
+            {/*  */}
+            <div>
+              <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
+            </div>
+            {/*  */}
+            <div>
+              <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
+            </div>
+          </div>
+
       </div>
 
       {/* Rotated images section and centered content */}
@@ -61,7 +90,14 @@ export default function Home() {
         <div className="absolute right-0 top-6 rotate-20">
           <ImagesCard cardInfo={first} customStyle="" bgColor=""/>
         </div>
-          
+
+        {/* <div className="absolute w-full h-full ">
+          <div>
+            <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
+          </div>
+            <SingleImageCard customStyle=" w-[200px] h-[240px] bg-red-300 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
+        </div> */}
+
       </div>
       
        {/* floating images section */}
@@ -78,6 +114,8 @@ export default function Home() {
         <div className="h-[100vh] flex flex-col justify-center items-center">
           <CircleDesign bgColor="bg-green-700" innerColor="bg-amber-200" width="w-[60px]" height="h-[60px]"/>
           <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
+          <SingleImageCard customStyle=" w-[300px] h-[340px] bg-red-300 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[50px]"/>
+
         </div>
 
      </div>

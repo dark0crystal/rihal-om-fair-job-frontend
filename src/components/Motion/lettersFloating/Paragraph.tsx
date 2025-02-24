@@ -4,8 +4,8 @@ import { useScroll,useTransform} from "framer-motion";
 import { useRef } from "react";
 
 
-export default function Paragraph(){
-    const paragraph = "let's begin"
+export default function Paragraph({paragraph ,customStyle}:any){
+    // const paragraph = "let's begin"
 
     const targetRef = useRef<HTMLDivElement>(null)
     const {scrollYProgress} =useScroll({
@@ -18,11 +18,11 @@ export default function Paragraph(){
     // const left ="40%"
     const words  = paragraph.split(" ")
     return(
-        <div ref={targetRef} className="flex flex-row flex-wrap justify-center items-center w-[60vw] gap-8 font-bold text-9xl h-full  bg-red-200 ">
+        <div ref={targetRef} className={` ${customStyle}  `}>
         {words.map((word: any , index:number)=>{
             const character = word.split("")
             return(
-                <h1 key={index} className="bg-amber-100">
+                <span key={index} className="mx-1">
                 { 
                 character.map((char: any, index: number)=>{
                     const start=(index+1)/100  ;
@@ -32,7 +32,7 @@ export default function Paragraph(){
                     
                     return <Word scrollYProgress={scrollYProgress} range={[start,mid,min,end]}  key={index}>{char}</Word>
                 })}
-            </h1>
+            </span>
             )
         })}
     </div>
@@ -46,7 +46,7 @@ const Word =({children ,scrollYProgress, range }:any)=>{
     // const z =20
 
     return(
-        <motion.span  className="inline-block" style={{y}} >
+        <motion.span  className="inline-block"  >
             {children}
         </motion.span>
     )

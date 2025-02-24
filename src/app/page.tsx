@@ -11,7 +11,7 @@ import { useScroll,useTransform } from "framer-motion";
 import { useRef } from "react";
 import Paragraph from "@/components/Motion/lettersFloating/Paragraph";
 import CircleDesign from "@/components/CircleDesign";
-import SingleImageCard from "@/components/Motion/SingleImageCard";
+import SingleImageCard from "@/components/Motion/single-cards/SingleImageCard";
 
 
 export default function Home() {
@@ -47,32 +47,7 @@ export default function Home() {
         <TextCard cardInfo={firstContent}/>
       </div>
 
-      <div className="h-[100vh] w-screen  bg-violet-200 ">
-
-        <div className=" h-[50vh] w-screen bg-amber-100 flex flex-col justify-center items-center text-center">
-          <h1 className="text-8xl font-semibold">we are here to help you creating</h1>
-        </div>
-
-        <div className="grid grid-cols-4 grid-rows-1">
-            {/*  */}
-            <div>
-              <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
-            </div>
-            {/*  */}
-            <div>
-                <SingleImageCard customStyle=" w-[200px] h-[240px] bg-red-300 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
-            </div>
-            {/*  */}
-            <div>
-              <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
-            </div>
-            {/*  */}
-            <div>
-              <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
-            </div>
-          </div>
-
-      </div>
+     
 
       {/* Rotated images section and centered content */}
       <div className="flex flex-col justify-center items-center  relative h-[60vh] w-screen bg-[#f9f5ec]">

@@ -12,6 +12,7 @@ import { useRef } from "react";
 import Paragraph from "@/components/Motion/lettersFloating/Paragraph";
 import CircleDesign from "@/components/CircleDesign";
 import SingleImageCard from "@/components/Motion/single-cards/SingleImageCard";
+import SingleCardsContainer from "@/components/Motion/single-cards/SingleCardsContainer";
 
 
 export default function Home() {
@@ -47,7 +48,7 @@ export default function Home() {
         <TextCard cardInfo={firstContent}/>
       </div>
 
-     
+     <SingleCardsContainer/>
 
       {/* Rotated images section and centered content */}
       <div className="flex flex-col justify-center items-center  relative h-[60vh] w-screen bg-[#f9f5ec]">

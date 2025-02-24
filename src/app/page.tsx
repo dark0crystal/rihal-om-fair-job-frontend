@@ -49,7 +49,7 @@ export default function Home() {
         {/* Hero Paragraph */}
         <motion.div style={{scale}} className="p-10 lg:p-2 w-screen flex flex-col justify-center items-center md:min-h-[30vh] min-h-[40vh] h-fit text-[#131313] text-center">
             <Image src={Ximg} width={200} height={150} alt="xx"/>
-            <h1  className="text-3xl md:text-6xl lg:text-8xl font-bold   lg:font-semibold "><span className="text-[#7546ff]">Ready</span> to get insightful summaries?<span className="text-[#7546ff]"> Let&apos;s dive in</span></h1>   
+            <h1  className="text-[calc(41px+61.5*(90vw-375px)/684)] leading-[1] font-bold   lg:font-black "><span className="text-[#7546ff]">Ready</span> to get insightful summaries?<span className="text-[#7546ff]"> Let&apos;s dive in</span></h1>   
         </motion.div>
 
        

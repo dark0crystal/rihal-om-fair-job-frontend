@@ -9,12 +9,16 @@ export default function SingleCardsContainer(){
     const targetRef = useRef<HTMLDivElement>(null);
     const{scrollYProgress} = useScroll({
         target:targetRef,
-        offset:["start start","end end"]
+        offset:["start end" , "end start"]
     })
 
     
-    const y = useTransform(scrollYProgress ,[0 ,1] , ["10%" ,"15%" ])
-    const scale =useTransform(scrollYProgress ,[0, 1], [1, 4])
+    const y1 =useTransform ( scrollYProgress, [0,1] , [50,-50] )
+    const y2 =useTransform ( scrollYProgress, [0,1] , [55,-40] )
+    const y3 =useTransform ( scrollYProgress, [0,1] , [60,-40] )
+    const y4 =useTransform ( scrollYProgress, [0,1] , [65,-40] )
+    const scale =useTransform(scrollYProgress ,[0, 1], [1, 0.8])
+    const opacity =useTransform(scrollYProgress ,[0, 0.8 ], [1, 0.8])
     
     return(
         <div ref={targetRef}className="h-[100vh] w-screen z-0 relative">
@@ -24,7 +28,7 @@ export default function SingleCardsContainer(){
                 
                 <div className=" w-screen mt-[10vw] flex flex-col justify-center items-center text-center">
                     <div className="w-[60vw]">
-                        <h1 className="text-8xl font-semibold">we are here to help you </h1>
+                        <motion.h1 style={{opacity,scale}} className="text-8xl font-semibold">we are here to <span className="text-[#7546ff]">help you</span> </motion.h1>
                     </div>
                 </div>
         
@@ -35,22 +39,22 @@ export default function SingleCardsContainer(){
           <div className="flex flex-col items-center w-screen bg-amber-200 h-full justify-center absolute z-0">
 
             <div className="grid grid-cols-4 grid-rows-1 relative h-full w-full">
-                        {/*  */}
-                        <motion.div style={{y,scale}} className=" absolute top-[40%] right-[40%] rotate-12">
+                        {/* 1 */}
+                        <motion.div style={{y:y1}}  className=" absolute top-[40%] right-[40%] rotate-12">
                             <SingleImageCard customStyle=" w-[160px] h-[200px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
                         </motion.div>
-                        {/*  */}
-                        <div className=" absolute top-[55%] left-[25%] -rotate-15">
+                        {/* 2 */}
+                        <motion.div style={{y:y2}} className=" absolute top-[55%] left-[25%] -rotate-15">
                             <SingleImageCard customStyle=" w-[180px] h-[220px] bg-red-300 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[35px]"/>
-                        </div>
-                        {/*  */}
-                        <div className=" absolute top-[20%] left-[10%] rotate-6">
+                        </motion.div>
+                        {/*3 */}
+                        <motion.div style={{y:y3}} className=" absolute top-[20%] left-[10%] rotate-6">
                         <SingleImageCard customStyle=" w-[200px] h-[240px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[40px]"/>
-                        </div>
-                        {/*  */}
-                        <div className=" absolute top-[20%] right-[10%] -rotate-22">
+                        </motion.div>
+                        {/* 4 */}
+                        <motion.div style={{y:y4}} className=" absolute top-[20%] right-[10%] -rotate-22">
                         <SingleImageCard customStyle=" w-[240px] h-[280px] bg-amber-100 flex flex-col justify-center items-center p-3 " bottomSectionHeight="h-[50px]"/>
-                        </div>
+                        </motion.div>
                 </div>
             </div>
 

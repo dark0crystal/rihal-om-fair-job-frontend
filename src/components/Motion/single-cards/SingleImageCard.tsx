@@ -1,5 +1,5 @@
 "use client"
-import muchclicks from "../../../public/much-clicks.jpeg"
+import muchclicks from "../../../../public/much-clicks.jpeg"
 // import img1 from "../../../public/much-clicks.jpeg"
 // import img1 from "../../../public/much-clicks.jpeg"
 import {motion} from "framer-motion"

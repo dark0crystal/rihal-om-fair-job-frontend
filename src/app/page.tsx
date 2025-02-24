@@ -13,9 +13,23 @@ import Paragraph from "@/components/Motion/lettersFloating/Paragraph";
 import CircleDesign from "@/components/CircleDesign";
 import SingleImageCard from "@/components/Motion/single-cards/SingleImageCard";
 import SingleCardsContainer from "@/components/Motion/single-cards/SingleCardsContainer";
+import { useEffect } from 'react';
+import Lenis from '@studio-freight/lenis'
 
 
 export default function Home() {
+  // smoth scroll
+  useEffect( () => {
+    const lenis = new Lenis()
+   
+    function raf(time: number) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+},[])
+
   const targetRef = useRef<HTMLDivElement>(null);
   const {scrollYProgress} = useScroll({
     target:targetRef,
